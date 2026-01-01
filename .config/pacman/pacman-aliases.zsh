@@ -12,7 +12,7 @@ pacman() {
       ;; 
 	up)
       shift
-      command sudo pacman -Syu && pacman -Qdtq | pacman -Rns -
+      command sudo pacman -Syu && sudo pacman -Qdtq | sudo pacman -Rns -
       ;;
 	check)
       shift
@@ -20,7 +20,7 @@ pacman() {
       ;;
 	clean)
       shift
-      command pacman -Qdtq | pacman -Rns -
+      command sudo pacman -Qdtq | sudo pacman -Rns -
       ;;
 	search)
       shift
