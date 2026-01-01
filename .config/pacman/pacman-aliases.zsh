@@ -28,7 +28,7 @@ pacman() {
       ;;
 	ls)
       shift
-      command pacman -Qs "$@"
+      command pacman -Qe
       ;;
 	help)
       echo "pacman aliases:"
