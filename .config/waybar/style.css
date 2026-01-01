@@ -1,0 +1,27 @@
+@define-color disabled #707880;
+@define-color lavender #b4befe;
+@define-color mantle rgba(24, 24, 37, 0.8);
+
+* {
+  font-family: "JetBrains Mono Nerd Font", sans-serif;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-bottom: none;
+  color: @lavender;
+}
+
+.modules-center,
+.modules-left,
+.modules-right {
+  background-color: @mantle;
+  padding: 4px 14px;
+  margin: 8px 8px 0px;
+  border-radius: 30px;
+}
+
+#pulseaudio.muted {
+  color: @disabled;
+}

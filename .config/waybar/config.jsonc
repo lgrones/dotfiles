@@ -1,0 +1,35 @@
+// -*- mode: jsonc -*-
+{
+  "spacing": 14,
+  "output": ["DP-2"],
+  "modules-left": ["mpris"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio"],
+  "mpris": {
+    "interval": 1,
+    "max-length": 40,
+    "format": "<span color=\"#f5e0dc\">{status_icon}</span> {title}",
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    }
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%d.%m.%y <span color=\"#707880\">|</span> %a <span color=\"#707880\">|</span> %H:%M:%S}"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 14
+  },
+  "pulseaudio": {
+    "format": "<span color=\"#f5e0dc\">{icon}</span>  {volume}%",
+    "format-muted": "<span color=\"#f5e0dc\"></span>  {volume}%",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": ["", ""]
+    }
+  }
+}
