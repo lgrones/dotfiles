@@ -17,7 +17,26 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%d.%m.%y <span color=\"#707880\">|</span> %a <span color=\"#707880\">|</span> %H:%M:%S}"
+    "format": "{:%d.%m.%y <span color=\"#707880\">|</span> %a <span color=\"#707880\">|</span> %H:%M:%S}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "locale": "en_GB.UTF-8",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 4,
+      "weeks-pos": "right",
+      "format": {
+        "months": "<span color='#f5e0dc'>{}</span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weeks": "<span color='#707880'>W{}</span>",
+        "weekdays": "<span color='#707880'>{}</span>",
+        "today": "<span color='#eba0ac'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "tray": {
     "icon-size": 18,
@@ -26,6 +45,7 @@
   "pulseaudio": {
     "format": "<span color=\"#f5e0dc\">{icon}</span>  {volume}%",
     "format-muted": "<span color=\"#f5e0dc\"></span>  {volume}%",
+    "on-click": "pavucontrol",
     "format-icons": {
       "headphone": "",
       "headset": "",
