@@ -1,3 +1,6 @@
+@define-color lavender #b4befe;
+@define-color mantle #181825;
+
 * {
   font-family: "JetBrains Mono Nerd Font", sans-serif;
   font-size: 14px;
@@ -6,17 +9,17 @@
 window#waybar {
   background-color: transparent;
   border-bottom: none;
-  color: @theme_selected_bg_color;
+  color: @lavender;
 }
 
 tooltip {
-  background: alpha(@theme_bg_color, 0.85);
+  background: alpha(@mantle, 0.85);
 }
 
 .modules-center,
 .modules-left,
 .modules-right {
-  background: alpha(@theme_bg_color, 0.85);
+  background: alpha(@mantle, 0.85);
   padding: 4px 14px;
   margin: 8px 8px 0px;
   border-radius: 30px;

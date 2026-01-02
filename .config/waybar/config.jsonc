@@ -4,7 +4,7 @@
   "output": ["DP-2"],
   "modules-left": ["mpris"],
   "modules-center": ["clock"],
-  "modules-right": ["tray", "pulseaudio"],
+  "modules-right": ["tray", "custom/notifications", "pulseaudio"],
   "mpris": {
     "interval": 1,
     "max-length": 40,
@@ -51,5 +51,23 @@
       "headset": "",
       "default": ["", ""]
     }
+  },
+  "custom/notifications": {
+    "format": "<span color=\"#f5e0dc\" size=\"11pt\">{icon}</span><span size=\"2pt\"> </span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
   }
 }

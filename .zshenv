@@ -1,3 +1,6 @@
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export NVM_DIR="$HOME/.nvm"
+export EDITOR="nano"
+export TERMINAL="kitty"
+export BROWSER="zen"
 export PATH="$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PNPM_HOME:$HOME/.cargo/bin:$HOME/.dotnet/tools:$PATH"

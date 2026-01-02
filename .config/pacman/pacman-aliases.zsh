@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-pacman() {
+pm() {
   case "$1" in
     rm)
       shift
