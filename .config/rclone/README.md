@@ -4,6 +4,7 @@ Credentials are managed via env vars
 
 ```bash
 touch ~/.config/rclone/credentials.env
+chmod 600 ~/.config/rclone/credentials.env
 echo -e "export RCLONE_CONFIG_GDRIVE_CLIENT_ID=\"client-id\"
 export RCLONE_CONFIG_GDRIVE_CLIENT_SECRET=\"client-secret\"" \
 >> ~/.config/rclone/credentials.env

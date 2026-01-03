@@ -5,6 +5,7 @@
 @define-color selected        #b4befe;
 @define-color hover           alpha(@selected, .3);
 @define-color urgent          #f38ba8;
+@define-color button          alpha(@hover, 0.3);
 
 * {
   color: @text;
@@ -90,18 +91,14 @@
   min-height: 3.2em;
 }
 
-.notification > *:last-child > * .notification-action {
-  background: @hover;
+.notification .notification-action {
+  background: @button;
   margin: 0 6px 9px 6px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
-.notification > *:last-child > * .notification-action:hover {
-  background: @selected;
-}
-
-.notification > *:last-child > * .notification-action:active {
-  background: @selected;
+.notification .notification-action:hover {
+  background: @hover;
 }
 
 .control-center {
@@ -245,7 +242,7 @@
 .widget-buttons-grid button {
   padding: 18px 25px;
   margin: 3px;
-  background: alpha(@hover, 0.3);
+  background: @button;
   border-radius: 12px;
 }
 
@@ -304,7 +301,7 @@
   border-radius: 16px;
   padding: 0 6px;
   margin: 8px 0 0 0;
-  background: alpha(@hover, 0.3);
+  background: @button;
 }
 
 .widget-mpris-album-art {
