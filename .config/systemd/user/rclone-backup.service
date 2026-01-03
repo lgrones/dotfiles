@@ -1,0 +1,9 @@
+[Unit]
+Description=Rclone SSD Backup to Google Drive
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/rclone/backup.sh
+Nice=10

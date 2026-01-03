@@ -21,6 +21,7 @@ image/svg+xml=org.inkscape.Inkscape.desktop;
 video/webm=io.github.celluloid_player.Celluloid.desktop;
 audio/vnd.wave=audacious.desktop;
 audio/x-m4r=io.github.celluloid_player.Celluloid.desktop;
+application/x-shellscript=code.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
@@ -48,3 +49,4 @@ video/mp4=io.github.celluloid_player.Celluloid.desktop
 video/webm=io.github.celluloid_player.Celluloid.desktop
 audio/vnd.wave=audacious.desktop
 audio/x-m4r=io.github.celluloid_player.Celluloid.desktop
+application/x-shellscript=code.desktop

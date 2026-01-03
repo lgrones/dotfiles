@@ -12,4 +12,20 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon>emblem-added</icon>
+	<name>Create new file</name>
+	<submenu></submenu>
+	<unique-id>1767443591829485-1</unique-id>
+	<command>file=$(zenity --entry --title &quot;Create New File&quot; --text &quot;Enter the new name:&quot; --entry-text &quot;&quot;); touch &quot;$file&quot;</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
 </actions>
