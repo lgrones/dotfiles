@@ -1,8 +1,6 @@
 autoload -Uz promptinit
 promptinit
 
-precmd() { print "" }
-
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
@@ -33,6 +31,6 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 [ -s "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 [ -s "$HOME/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" ] && source "$HOME/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
-if command -v oh-my-posh &>/dev/null; then
-	eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
+if command -v starship &>/dev/null; then
+	eval "$(starship init zsh)"
 fi
