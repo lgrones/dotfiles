@@ -12,7 +12,7 @@ pm() {
       ;; 
 	up)
       shift
-      command sudo pacman -Syu && sudo pacman -Qdtq | sudo pacman -Rns -
+      command sudo pacman -Syu && pm clean
       ;;
 	check)
       shift
@@ -20,7 +20,7 @@ pm() {
       ;;
 	clean)
       shift
-      command sudo pacman -Qdtq | sudo pacman -Rns -
+      command sudo pacman -Qdtq | ifne sudo pacman -Rns -
       ;;
 	search)
       shift
