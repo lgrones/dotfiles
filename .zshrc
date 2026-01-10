@@ -9,8 +9,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
-# pacman aliases
-[ -s "$HOME/.config/pacman/pacman-aliases.zsh" ] && source "$HOME/.config/pacman/pacman-aliases.zsh"
+# yay aliases
+[ -s "$HOME/.config/yay/yay-aliases.zsh" ] && source "$HOME/.config/yay/yay-aliases.zsh"
 
 # NVM
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"

@@ -22,6 +22,8 @@ video/webm=io.github.celluloid_player.Celluloid.desktop;
 audio/vnd.wave=audacious.desktop;
 audio/x-m4r=io.github.celluloid_player.Celluloid.desktop;
 application/x-shellscript=code.desktop;
+application/schema+json=code.desktop;
+inode/directory=code.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
@@ -50,3 +52,4 @@ video/webm=io.github.celluloid_player.Celluloid.desktop
 audio/vnd.wave=audacious.desktop
 audio/x-m4r=io.github.celluloid_player.Celluloid.desktop
 application/x-shellscript=code.desktop
+application/schema+json=code.desktop

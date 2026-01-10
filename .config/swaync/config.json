@@ -40,6 +40,10 @@
     "buttons-grid": {
       "actions": [
         {
+          "label": "",
+          "command": "swaync-client -cp; sleep 0.2; hyprctl dispatch -- exec hyprpicker -a"
+        },
+        {
           "label": "",
           "command": "swaync-client -cp; sleep 0.2; hyprctl dispatch -- exec hyprpicker -a"
         },
@@ -58,12 +62,8 @@
           "update-command": "bash -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && $HOME/.config/swaync/scripts/update_power-mode.sh'"
         },
         {
-          "label": "",
-          "command": "hyprctl dispatch -- exec kitty -e htop ; swaync-client -cp"
-        },
-        {
           "label": "",
-          "command": "hyprctl dispatch -- exec kitty -e nvtop ; swaync-client -cp"
+          "command": "hyprctl dispatch -- exec kitty -e btop ; swaync-client -cp"
         }
       ]
     }
