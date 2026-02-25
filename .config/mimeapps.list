@@ -24,7 +24,7 @@ audio/x-m4r=io.github.celluloid_player.Celluloid.desktop;
 application/x-shellscript=code.desktop;
 application/schema+json=code.desktop;
 inode/directory=code.desktop;
-application/x-zerosize=code.desktop;
+application/x-zerosize=featherpad.desktop;code.desktop;
 application/pdf=zen.desktop;
 
 [Default Applications]
@@ -38,7 +38,7 @@ application/xhtml+xml=zen.desktop
 message/rfc822=userapp-Thunderbird-4EOGI3.desktop
 text/calendar=userapp-Thunderbird-7O8GI3.desktop
 text/html=zen.desktop
-text/plain=jetbrains-rider.desktop
+text/plain=code.desktop
 x-scheme-handler/chrome=zen.desktop
 x-scheme-handler/http=zen.desktop
 x-scheme-handler/https=zen.desktop
