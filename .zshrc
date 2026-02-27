@@ -19,11 +19,6 @@ if command -v zoxide &>/dev/null; then
     eval "$(zoxide init zsh --cmd cd)"
 fi
 
-# thefuck
-if command -v thefuck &>/dev/null; then
-    eval $(thefuck --alias fuck)
-fi
-
 # bare config repo alias
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
