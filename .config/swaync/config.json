@@ -49,7 +49,7 @@
         },
         {
           "label": "",
-          "command": "swaync-client -cp; sleep 0.2; hyprctl dispatch -- exec hyprpicker -a"
+          "command": "swaync-client -cp; sleep 0.2; ~/.config/rofi/clipboard.sh"
         },
         {
           "label": "",

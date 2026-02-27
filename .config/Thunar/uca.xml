@@ -13,19 +13,14 @@
 	<directories/>
 </action>
 <action>
-	<icon>emblem-added</icon>
-	<name>Create new file</name>
+	<icon>application-archive</icon>
+	<name>Unzip</name>
 	<submenu></submenu>
-	<unique-id>1767443591829485-1</unique-id>
-	<command>file=$(zenity --entry --title &quot;Create New File&quot; --text &quot;Enter the new name:&quot; --entry-text &quot;&quot;); touch &quot;$file&quot;</command>
+	<unique-id>1772195741687682-1</unique-id>
+	<command>7z x -aos %f</command>
 	<description></description>
-	<range></range>
-	<patterns>*</patterns>
-	<directories/>
-	<audio-files/>
-	<image-files/>
+	<range>*</range>
+	<patterns>*.zip;*.rar;*.7z;*.tar.gz;*.tar.bz2;*.tar.xz;*.tgz</patterns>
 	<other-files/>
-	<text-files/>
-	<video-files/>
 </action>
 </actions>
