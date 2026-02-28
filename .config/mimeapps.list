@@ -17,7 +17,6 @@ x-scheme-handler/webcal=userapp-Thunderbird-7O8GI3.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-7O8GI3.desktop;
 image/png=org.xfce.ristretto.desktop;
 video/mp4=org.xfce.ristretto.desktop;io.github.celluloid_player.Celluloid.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;
 video/webm=io.github.celluloid_player.Celluloid.desktop;
 audio/vnd.wave=audacious.desktop;
 audio/x-m4r=io.github.celluloid_player.Celluloid.desktop;

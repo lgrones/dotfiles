@@ -7,16 +7,6 @@
  * Rofi Version: 1.7.3
  **/
 
-/*****----- Configuration -----*****/
-configuration {
-	modi:                       "drun,projects:~/.config/rofi/projects.sh,run";
-    show-icons:                 true;
-    display-drun:               "Apps";
-    display-run:                "Run";
-    display-projects:           "Projects";
-	drun-display-format:        "{name}";
-}
-
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 11";
@@ -59,9 +49,8 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/search.JPG", width);
+    background-image:            url("~/.config/rofi/clipboard.jpg", width);
     orientation:                 vertical;
-    children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
 
 listbox {
@@ -72,9 +61,7 @@ listbox {
     children:                    [ "message", "listview" ];
 }
 
-dummy {
-    background-color:            transparent;
-}
+
 
 /*****----- Inputbar -----*****/
 inputbar {
@@ -100,25 +87,6 @@ entry {
     cursor:                      text;
     placeholder:                 "Search";
     placeholder-color:           inherit;
-}
-
-/*****----- Mode Switcher -----*****/
-mode-switcher{
-    enabled:                     true;
-    spacing:                     20px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-}
-button {
-    padding:                     15px;
-    border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  inherit;
-    cursor:                      pointer;
-}
-button selected {
-    background-color:            @selected;
-    text-color:                  @foreground-alt;
 }
 
 /*****----- Listview -----*****/

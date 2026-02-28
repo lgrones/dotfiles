@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="674.93591"
+   height="725.02722"
+   viewBox="0 0 26.997437 29.001089"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="csharp.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2225"
+     inkscape:cx="337.83231"
+     inkscape:cy="362.37219"
+     inkscape:window-width="2540"
+     inkscape:window-height="1384"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <title
+     id="title1">file_type_csharp2</title>
+  <path
+     d="m 26.183384,7.4900337 a 2.45,2.45 0 0 0 -0.936,-0.879 q -5.194,-2.868 -10.393,-5.73300001 a 2.64,2.64 0 0 0 -2.763,0.024 C 10.713384,1.6810337 3.8163836,5.4670337 1.7603836,6.6080337 a 2.29,2.29 0 0 0 -1.25900005,2.125 V 20.272034 a 2.4,2.4 0 0 0 0.3,1.22 c 0.23000005,0.382 0.56000005,0.693 0.95400005,0.9 2.056,1.141 8.9540004,4.927 10.3320004,5.706 a 2.64,2.64 0 0 0 2.763,0.026 q 5.19,-2.871 10.386,-5.733 a 2.44,2.44 0 0 0 0.955,-0.9 2.4,2.4 0 0 0 0.3,-1.22 l 0.005,-11.5370003 a 2.35,2.35 0 0 0 -0.313,-1.244 z"
+     fill="none"
+     stroke="#ffffff"
+     id="path1" />
+  <path
+     d="m 17.101384,16.522034 a 4.121,4.121 0 1 1 -0.027,-4.087 l 3.615,-2.073 a 8.309,8.309 0 0 0 -15.4880004,4.14 8.2,8.2 0 0 0 1.1,4.117 8.319,8.319 0 0 0 14.4110004,-0.017 z"
+     fill="#ffffff"
+     id="path2" />
+  <path
+     d="m 25.171384,13.773034 v -1.238 h -1.007 v -1.006 h -1.239 v 1.006 h -1.508 v -1.006 h -1.239 v 1.006 h -1.008 v 1.238 h 1.006 v 1.513 h -1.006 v 1.237 h 1.006 v 1.006 h 1.239 v -1.006 h 1.509 v 1.006 h 1.239 v -1.006 h 1.006 v -1.237 h -1 v -1.513 z m -2.246,1.513 h -1.508 v -1.513 h 1.508 z"
+     fill="#ffffff"
+     id="path3" />
+  <metadata
+     id="metadata3">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>file_type_csharp2</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

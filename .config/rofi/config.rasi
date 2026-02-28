@@ -104,8 +104,10 @@ configuration {
     }
 
 	/*---------- Keybindings ----------*/
-	kb-mode-next: "Shift+Right,Tab";
 	kb-element-next: "";
+	kb-element-prev: "";
+	kb-mode-next: "Shift+Right,Tab";
+	kb-mode-previous: "Shift+Left,ISO_Left_Tab";
 /*
 	kb-primary-paste: "Control+V,Shift+Insert";
 	kb-secondary-paste: "Control+v,Insert";
