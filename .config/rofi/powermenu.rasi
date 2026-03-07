@@ -57,7 +57,7 @@ imagebox {
     spacing:                     20px;
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/bye.jpg", height);
+    background-image:            url("~/.config/rofi/powermenu.jpg", height);
 }
 
 /*****----- Listview -----*****/
@@ -82,7 +82,7 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     71px 0px;
+    padding:                     73px 0px;
     border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @foreground;
