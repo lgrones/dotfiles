@@ -1,0 +1,28 @@
+@import "globals" 
+
+configuration {
+  show-icons: false;
+}
+
+* {
+  font: "JetBrains Mono Nerd Font 40";
+}
+
+imagebox {
+  background-image: url("~/.config/rofi/powermenu/powermenu.jpg", height);
+}
+
+listview {
+  columns: 2;
+  lines: 2;
+  spacing: 20px;
+}
+
+element {
+  padding: 60px 0px;
+  background-color: @background-alt;
+}
+
+element-text {
+  horizontal-align: 0.44;
+}

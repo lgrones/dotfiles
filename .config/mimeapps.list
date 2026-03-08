@@ -25,6 +25,7 @@ application/schema+json=code.desktop;
 inode/directory=code.desktop;
 application/x-zerosize=featherpad.desktop;code.desktop;
 application/pdf=zen.desktop;
+image/svg+xml=featherpad.desktop;code.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop

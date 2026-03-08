@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/rofi"
+dir="$HOME/.config/rofi/bluetooth"
+theme="${dir}/bluetooth.rasi"
 
 declare -A mac_map
+declare -A icon_map
 labels=()
 
 while read -r _ mac name; do
@@ -11,23 +13,33 @@ while read -r _ mac name; do
 	connected=$(echo "$info" | grep "Connected:" | awk '{print $2}')
 	battery=$(echo "$info" | grep "Battery Percentage:" | grep -o '([0-9]*)' | tr -d '()')
 
-	[ "$connected" = "yes" ] && status="" || status=""
-
 	if [ -n "$battery" ]; then
 		icons=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
 		index=$((battery / 10))
-		label="$status  $name ${icons[$index]} $battery%"
+		label="$name ${icons[$index]} $battery%"
 	else
-		label="$status  $name"
+		label="$name"
+	fi
+
+	if [ "$connected" = "yes" ]; then
+		icon_map["$label"]="bluetooth-online"
+	else
+		icon_map["$label"]="bluetooth-offline"
 	fi
 
 	mac_map["$label"]="$mac"
 	labels+=("$label")
 done < <(bluetoothctl devices Paired)
 
-add="  Scan for devices"
-labels+=("$add")
-choice=$(printf '%s\n' "${labels[@]}" | rofi -dmenu -no-show-icons -p "" -theme "${dir}/bluetooth.rasi")
+add=$'Scan for devices'
+
+choice=$({
+	for label in "${labels[@]}"; do
+		echo -en "$label\0icon\x1f${icon_map[$label]}\n"
+	done
+	echo -en "$add\0icon\x1fplasma-search"
+} | rofi -dmenu -theme "$theme" \
+	-theme-str '#textbox { enabled: false; }')
 
 if [ -z "$choice" ]; then
 	exit 0
@@ -55,7 +67,8 @@ if [ "$choice" = "$add" ]; then
 	echo "scan on" >&3
 
 	# Show notice
-	rofi -dmenu -no-show-icons -theme "${dir}/bluetooth.rasi" -theme-str '#textbox { content: "Scanning for 10 seconds..."; }' &
+	rofi -dmenu -theme "$theme" \
+		-theme-str '#textbox { content: "Scanning for 10 seconds..."; }' &
 	notice_pid=$!
 
 	# Wait for notice to close, or for 10 seconds
@@ -89,7 +102,8 @@ if [ "$choice" = "$add" ]; then
 
 	mac=$(printf '%s\n' "${labels[@]}" |
 		grep -v '^$' |
-		rofi -dmenu -no-show-icons -theme "${dir}/bluetooth.rasi" -theme-str '#textbox { content: "Available Devices"; }' |
+		rofi -dmenu -no-show-icons -theme "$theme" \
+			-theme-str '#textbox { content: "Available Devices"; }' |
 		awk '{print $1}')
 
 	if [ -z "$mac" ]; then
@@ -124,13 +138,14 @@ fi
 
 mac="${mac_map[$choice]}"
 
-connect='󰂯  Connect'
-disconnect='󰂲  Disconnect'
-alias='󰗧  Set Alias (Device has to be turned on)'
-remove='  Remove'
+connect='Connect'
+disconnect='Disconnect'
+alias='Set Alias (Device has to be turned on)'
+remove='Remove'
 
-action=$(echo -e "$connect\n$disconnect\n$alias\n$remove" |
-	rofi -dmenu -no-show-icons -theme "${dir}/bluetooth.rasi" -theme-str "#textbox { content: \"$choice\"; }")
+action=$(echo -e "$connect\0icon\x1fbluetooth-online\n$disconnect\0icon\x1fbluetooth-offline\n$alias\0icon\x1faccessories-text-editor\n$remove\0icon\x1fuser-trash" |
+	rofi -dmenu -theme "$theme" \
+		-theme-str "#textbox { content: \"$choice\"; }")
 
 if [ -z "$action" ]; then
 	"${dir}/bluetooth.sh"
@@ -143,7 +158,7 @@ if [ "$action" = "$alias" ]; then
 		exit 0
 	fi
 
-	alias=$(rofi -dmenu -no-show-icons -theme "${dir}/bluetooth.rasi" \
+	alias=$(rofi -dmenu -theme "$theme" \
 		-theme-str "#textbox { content: \"$choice\"; }" \
 		-theme-str "#inputbar { enabled: true;}" \
 		-theme-str "#listview { lines: 7;}")

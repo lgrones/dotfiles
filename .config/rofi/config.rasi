@@ -7,7 +7,6 @@
  **/
 
 configuration {
-	/*---------- General setting ----------*/
 	modi: "drun,run";
 	case-sensitive: false;
 	cycle: true;
@@ -15,12 +14,8 @@ configuration {
 	scroll-method: 0;
 	normalize-match: true;
 	show-icons: true;
-	icon-theme: "Papirus";
-/*	cache-dir: ;*/
 	steal-focus: false;
-/*	dpi: -1;*/
-
-	/*---------- Matching setting ----------*/
+	
 	matching: "normal";
 	tokenize: true;
 
@@ -65,11 +60,6 @@ configuration {
 /*	combi-modi: "window,run";*/
 /*	combi-hide-mode-prefix: false;*/
 /*	combi-display-format: "{mode} {text}";*/
-
-	/*---------- History and Sorting ----------*/
-	disable-history: false;
-	sorting-method: "normal";
-	max-history-size: 25;
 
 	/*---------- Display setting ----------*/
 	display-window: "Windows";

@@ -1,0 +1,20 @@
+@import "globals" 
+
+configuration {
+  modi: "drun,projects:~/.config/rofi/launcher/projects.sh";
+  display-drun: "Apps";
+  display-projects: "Projects";
+  drun-display-format: "{name}";
+}
+
+imagebox {
+  background-image: url("~/.config/rofi/launcher/launcher.jpg", height);
+  children:
+    [ "inputbar",
+    "dummy",
+    "mode-switcher"];
+}
+
+dummy {
+  background-color: transparent;
+}

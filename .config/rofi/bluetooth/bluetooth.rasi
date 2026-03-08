@@ -1,0 +1,29 @@
+@import "globals" 
+
+imagebox {
+  background-image: url("~/.config/rofi/bluetooth/bluetooth.jpg", height);
+  children: [ "textbox"];
+}
+
+textbox {
+  expand: false;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: @background-alt;
+  text-color: @foreground;
+}
+
+listbox {
+  children:
+    [ "inputbar",
+    "listview"];
+}
+
+inputbar {
+  enabled: false;
+  children: [ "entry"];
+}
+
+entry {
+  placeholder: "Alias Name";
+}

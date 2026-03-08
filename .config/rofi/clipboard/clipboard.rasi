@@ -1,0 +1,13 @@
+@import "globals"
+
+configuration {
+    show-icons: false;
+}
+
+imagebox {
+    background-image: url("~/.config/rofi/clipboard/clipboard.jpg", height);
+}
+
+textbox {
+ content: "Clipboard History";
+}
