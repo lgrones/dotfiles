@@ -1,6 +1,8 @@
 autoload -Uz promptinit
 promptinit
 
+bindkey "^[[3~" delete-char
+
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
