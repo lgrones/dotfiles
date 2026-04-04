@@ -57,3 +57,4 @@ application/x-shellscript=code.desktop
 application/schema+json=code.desktop
 application/x-zerosize=code.desktop
 application/pdf=zen.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop
