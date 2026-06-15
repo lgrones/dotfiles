@@ -26,6 +26,9 @@ inode/directory=code.desktop;
 application/x-zerosize=code.desktop;
 application/pdf=zen.desktop;
 image/svg+xml=code.desktop;
+application/octet-stream=code.desktop;
+inode/fifo=code.desktop;
+application/json=code.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
@@ -58,3 +61,6 @@ application/schema+json=code.desktop
 application/x-zerosize=code.desktop
 application/pdf=zen.desktop
 x-scheme-handler/jetbrains=jetbrainsd.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+application/octet-stream=code.desktop
+inode/fifo=code.desktop
