@@ -1,45 +1,33 @@
--- https://wiki.hypr.land/Configuring/
---
--- Lua config (Hyprland >= 0.55). The old hyprlang *.conf files are kept next to
--- this one as a fallback; Hyprland loads hyprland.lua if it exists.
+local fn = require("utils.functions")
+local home   = os.getenv("HOME")
+local hypr   = home .. "/.config/hypr"
+package.path = package.path .. ";" .. home .. "/.config/caelestia/?.lua"
 
-local C = require("catpuccin-mocha")
+-- Maybe set current colours to defaults
+fn.maybe_copy(hypr .. "/scheme/default.lua", hypr .. "/scheme/current.lua")
 
-require("animations")
-require("apps")
-require("decorations")
-require("env")
-require("inputs")
-require("keybindings")
-require("monitors")
-require("rules")
+-- User variables
+fn.maybe_create(home .. "/.config/caelestia/hypr-vars.lua", "return {}\n")
+local overrides = require("hypr-vars")
+if type(overrides) == "table" then
+    local vars = require("variables")
+    for k, v in pairs(overrides) do
+        vars[k] = v
+    end
+end
 
-hl.config({
-    general = {
-        gaps_in     = 4,
-        gaps_out    = 8,
-        border_size = 2,
+-- Configs
+require("hyprland.monitors")
+require("hyprland.env")
+require("hyprland.general")
+require("hyprland.input")
+require("hyprland.animations")
+require("hyprland.decorations")
+require("hyprland.group")
+require("hyprland.execs")
+require("hyprland.rules")
+require("hyprland.keybindings")
 
-        col = {
-            active_border   = C.lavender,
-            inactive_border = C.rgba("overlay0", "aa"),
-        },
-
-        resize_on_border = true,
-        allow_tearing    = false,
-        layout           = "dwindle",
-    },
-
-    dwindle = {
-        preserve_split = true, -- You probably want this
-    },
-
-    master = {
-        new_status = "master",
-    },
-
-    misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
-    },
-})
+-- User configs
+fn.maybe_create(home .. "/.config/caelestia/hypr-user.lua")
+require("hypr-user")

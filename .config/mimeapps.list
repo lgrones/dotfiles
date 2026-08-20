@@ -35,6 +35,7 @@ text/markdown=code.desktop;
 text/csv=code.desktop;
 text/javascript=code.desktop;
 application/toml=code.desktop;
+text/css=code.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
@@ -71,3 +72,4 @@ x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 application/octet-stream=code.desktop
 inode/fifo=code.desktop
 application/vnd.ms-publisher=code.desktop
+text/css=code.desktop

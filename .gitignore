@@ -1,0 +1,30 @@
+# This repo's work tree is $HOME, and core.bare + status.showuntrackedfiles=no
+# means new files must be added explicitly anyway. These rules keep generated
+# and throwaway files out of `git add -A` and `git status -u`.
+
+# Migration backups (catppuccin -> caelestia)
+*.bak
+theme-backup-*/
+
+# Pre-Lua hypr configs, superseded. Still in history at 411920e / 3f29f5e.
+.config/hypr/bak/
+.config/hypr/.vscode/
+
+# Written by `caelestia scheme set` on every scheme change.
+.config/hypr/scheme/
+.config/gtk-3.0/gtk.css
+.config/gtk-3.0/thunar.css
+.config/gtk-4.0/gtk.css
+.config/gtk-4.0/thunar.css
+.config/cava/config
+.config/qtengine/
+.config/btop/themes/caelestia.theme
+.config/nvtop/nvtop.colors
+.config/htop/htoprc
+.config/fuzzel/fuzzel.ini
+.config/spicetify/Themes/caelestia/
+.config/*/themes/caelestia.theme.css
+
+# Large app state, deliberately untracked (edited during the migration).
+.config/Code/
+.config/inkscape/

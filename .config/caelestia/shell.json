@@ -1,0 +1,208 @@
+{
+    "appearance": {
+        "transparency": {
+            "base": 0.9,
+            "enabled": true
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": false,
+            "showOnHover": false
+        },
+        "clock": {
+            "background": true,
+            "showDate": true,
+            "showIcon": false
+        },
+        "entries": [
+            {
+                "enabled": true,
+                "id": "workspaces"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "tray"
+            },
+            {
+                "enabled": true,
+                "id": "clock"
+            }
+        ],
+        "persistent": true,
+        "popouts": {
+            "activeWindow": false,
+            "tray": true
+        },
+        "scrollActions": {
+            "brightness": true
+        },
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            }
+        ],
+        "tray": {
+            "background": true,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": false,
+            "maxWindowIcons": 1,
+            "occupiedBg": false,
+            "perMonitorWorkspaces": true,
+            "showWindows": false,
+            "showWindowsOnSpecialWorkspaces": true,
+            "shown": 5
+        }
+    },
+    "dashboard": {
+        "performance": {
+            "showBattery": false
+        },
+        "showDashboard": true,
+        "showMedia": true,
+        "showWeather": true
+    },
+    "general": {
+        "apps": {
+            "terminal": [
+                "kitty"
+            ]
+        }
+    },
+    "launcher": {
+        "actions": [
+            {
+                "command": [
+                    "autocomplete",
+                    "wallpaper"
+                ],
+                "dangerous": false,
+                "description": "Change the current wallpaper",
+                "enabled": true,
+                "icon": "image",
+                "name": "Wallpaper"
+            },
+            {
+                "command": [
+                    "autocomplete",
+                    "scheme"
+                ],
+                "dangerous": false,
+                "description": "Change the current color scheme",
+                "enabled": true,
+                "icon": "palette",
+                "name": "Scheme"
+            },
+            {
+                "command": [
+                    "autocomplete",
+                    "variant"
+                ],
+                "dangerous": false,
+                "description": "Change the current scheme variant",
+                "enabled": true,
+                "icon": "colors",
+                "name": "Variant"
+            },
+            {
+                "command": [
+                    "toggleMode"
+                ],
+                "dangerous": false,
+                "description": "Toggle the current scheme to light/dark mode",
+                "enabled": true,
+                "icon": "brightness_4",
+                "name": "Light/Dark"
+            },
+            {
+                "command": [
+                    "caelestia",
+                    "shell",
+                    "nexus",
+                    "open"
+                ],
+                "dangerous": false,
+                "description": "Configure the shell",
+                "enabled": true,
+                "icon": "settings",
+                "name": "Settings"
+            }
+        ],
+        "favouriteApps": [
+            "steam",
+            "spotify"
+        ],
+        "maxShown": 10,
+        "maxWallpapers": 10,
+        "showOnHover": false,
+        "useFuzzy": {
+            "apps": true
+        }
+    },
+    "services": {
+        "smartScheme": true,
+        "weatherLocation": "Lochau"
+    },
+    "session": {
+        "order": [
+            "shutdown",
+            "reboot",
+            "gif",
+            "hibernate",
+            "logout"
+        ]
+    },
+    "sidebar": {
+        "enabled": true
+    },
+    "utilities": {
+        "cards": {
+            "keepAwake": false,
+            "recorder": false
+        },
+        "quickToggles": [
+            {
+                "enabled": false,
+                "id": "wifi"
+            },
+            {
+                "enabled": false,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": false,
+                "id": "mic"
+            },
+            {
+                "enabled": true,
+                "id": "settings"
+            },
+            {
+                "enabled": false,
+                "id": "gameMode"
+            },
+            {
+                "enabled": false,
+                "id": "dnd"
+            },
+            {
+                "enabled": false,
+                "id": "vpn"
+            }
+        ]
+    }
+}

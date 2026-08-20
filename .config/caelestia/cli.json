@@ -1,0 +1,6 @@
+{
+  "theme": {
+    "iconTheme": "YAMIS",
+    "postHook": "pkill -USR1 -x kitty; spicetify -q refresh >/dev/null 2>&1; ~/.config/caelestia/openrgb-sync.sh"
+  }
+}

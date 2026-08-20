@@ -26,7 +26,7 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # customization
 [ -s "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-[ -s "$HOME/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" ] && source "$HOME/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+[ -s "${XDG_STATE_HOME:-$HOME/.local/state}/caelestia/theme/zsh-syntax-highlighting.zsh" ] && source "${XDG_STATE_HOME:-$HOME/.local/state}/caelestia/theme/zsh-syntax-highlighting.zsh"
 
 if command -v starship &>/dev/null; then
 	eval "$(starship init zsh)"
