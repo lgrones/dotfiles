@@ -12,7 +12,7 @@ pm() {
       ;;
 	up)
       shift
-      command yay -Syu && pm cln
+      command yay -Syu
       ;;
 	chk)
       shift
