@@ -82,6 +82,12 @@ terminal sequences caelestia emits — no template required.
   `.config/hypr/variables.lua`, `.local/share/icons/default/index.theme`,
   `.local/share/nwg-look/gsettings`, and dconf `/org/gnome/desktop/interface/cursor-theme`.
 - **GTK:** `adw-gtk3-dark` + icon theme `YAMIS` (set via `cli.json` `theme.iconTheme`).
+- **Fonts:** `JetBrainsMono Nerd Font` is required and is **not** an installed package — the
+  `.ttf` ships in this repo under `.local/share/fonts/`, so `dot checkout` + `fc-cache -f`
+  is the whole install. It is referenced from `.gtkrc-2.0`, `.config/gtk-{3,4}.0/settings.ini`,
+  `.local/share/nwg-look/gsettings`, `.config/kitty/kitty.conf` and
+  `.config/hypr/hyprland/group.lua` (the last one via the `JetBrains Mono NF` alias).
+  `ttf-material-symbols-variable` is also required — caelestia shell draws its icons from it.
 - **Qt:** qtengine, via `QT_QPA_PLATFORMTHEME` in `.config/hypr/hyprland/env.lua`.
   `qt5ct`, `qt6ct` and `Kvantum` are gone — packages and configs both. `/etc/environment`
   had their env vars commented out, so nothing had been reading them for a while. If you
