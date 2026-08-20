@@ -1,0 +1,31 @@
+--------------------
+--  DECORATIONS   --
+--------------------
+
+local C = require("catpuccin-mocha")
+
+hl.config({
+    decoration = {
+        rounding       = 10,
+        rounding_power = 2,
+
+        active_opacity   = 0.98,
+        inactive_opacity = 0.9,
+
+        border_part_of_window = false,
+
+        shadow = {
+            enabled      = true,
+            range        = 4,
+            render_power = 3,
+            color        = C.rgba("crust", "ee"),
+        },
+
+        blur = {
+            enabled  = true,
+            size     = 3,
+            passes   = 2,
+            vibrancy = 0.1696,
+        },
+    },
+})
