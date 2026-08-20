@@ -55,6 +55,11 @@ Their output is generated, so it is gitignored. `.config/btop/btop.conf` just po
 placeholders; any key from `scheme.json` works, including the catppuccin-style aliases
 (`text`, `surface2`, `overlay0`, `red`, `peach`, `mauve`, …) and `term0`–`term15`.
 
+One deliberate exception: in `zsh-syntax-highlighting.zsh`, the `green` / `red` / `maroon`
+slots are **pinned to fixed hex, not templated**. Those three carry the does-this-command-
+exist signal, and the wallpaper-derived `dynamic` scheme happily maps `red` to a blue
+(`#9ab1ff`) and `green` to a cyan. Decoration in that file still follows the scheme.
+
 | Template | Consumed by |
 |---|---|
 | `kitty.conf` | `include`d from `.config/kitty/kitty.conf` |
@@ -73,23 +78,32 @@ terminal sequences caelestia emits — no template required.
 ## Non-caelestia dependencies
 
 - **Cursor:** `Bibata-Modern-Classic` — AUR `bibata-cursor-theme-bin`. Referenced from
-  `.gtkrc-2.0`, `.config/gtk-{3,4}.0/settings.ini`, `.config/xsettingsd/xsettingsd.conf`,
+  `.gtkrc-2.0`, `.config/gtk-{3,4}.0/settings.ini`,
   `.config/hypr/variables.lua`, `.local/share/icons/default/index.theme`,
   `.local/share/nwg-look/gsettings`, and dconf `/org/gnome/desktop/interface/cursor-theme`.
 - **GTK:** `adw-gtk3-dark` + icon theme `YAMIS` (set via `cli.json` `theme.iconTheme`).
 - **Qt:** qtengine, via `QT_QPA_PLATFORMTHEME` in `.config/hypr/hyprland/env.lua`.
-  `qt5ct`, `qt6ct` and `Kvantum` are **dead config** — `/etc/environment` has both
-  `QT_QPA_PLATFORMTHEME=qt5ct` and `QT_STYLE_OVERRIDE=kvantum` commented out, so nothing
-  reads them. They are still tracked here (along with `.themes/catppuccin-mocha-lavender-standard*`)
-  and still reference catppuccin, deliberately, as a fallback if qtengine is ever dropped.
-  If you flip back to qt5ct, that is the one place the old palette survives.
+  `qt5ct`, `qt6ct` and `Kvantum` are gone — packages and configs both. `/etc/environment`
+  had their env vars commented out, so nothing had been reading them for a while. If you
+  ever want them back, reinstall and recover the configs from history at `1d1bc5d`.
 - **VS Code:** theme comes from `soramanew.caelestia-vscode-integration`, installed from the
   `.vsix` in [caelestia-dots/caelestia](https://github.com/caelestia-dots/caelestia/tree/main/vscode).
   It watches `scheme.json` and regenerates its own theme JSON. `.config/Code/` is not tracked
   (large app state + Settings Sync is enabled).
 
+## Deliberately absent
+
+Removed, not missing. Everything here is recoverable from history if a decision turns out wrong.
+
+| Gone | Why | Recover from |
+|---|---|---|
+| `waybar`, `swaync` | caelestia shell provides the bar and notifications. Packages were already uninstalled; only orphan configs remained. | `1d1bc5d` |
+| `rofi` | `fuzzel` is caelestia's launcher. Package already gone. Took the custom bluetooth / clipboard / launcher / powermenu / windowswitcher scripts with it. | `1d1bc5d` |
+| `xsettingsd` | Binary was never installed and nothing launched it. GTK settings come from `gtk-{3,4}.0/settings.ini` + dconf. | `1d1bc5d` |
+| `qt5ct`, `qt6ct`, `Kvantum` | Superseded by qtengine. | `1d1bc5d` |
+| `.themes/catppuccin-mocha-lavender-standard*` | 2.3M of GTK theme with no consumer left after the caelestia migration. | `1d1bc5d` |
+
 ## Not tracked on purpose
 
-See `.gitignore`. Summary: caelestia-generated output, `.config/hypr/bak/` (pre-Lua configs,
-still in history at `411920e` and `3f29f5e`), `theme-backup-*/`, `*.bak`, and the two large
-app-state dirs `.config/Code/` and `.config/inkscape/`.
+See `.gitignore`. Summary: caelestia-generated output, `*.bak`, `theme-backup-*/`, and the
+two large app-state dirs `.config/Code/` and `.config/inkscape/`.

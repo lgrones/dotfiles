@@ -6,8 +6,6 @@
 *.bak
 theme-backup-*/
 
-# Pre-Lua hypr configs, superseded. Still in history at 411920e / 3f29f5e.
-.config/hypr/bak/
 .config/hypr/.vscode/
 
 # Written by `caelestia scheme set` on every scheme change.

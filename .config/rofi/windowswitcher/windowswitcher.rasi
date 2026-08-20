@@ -1,6 +1,0 @@
-@import "globals"
-
-imagebox {
-    background-image: url("~/.config/rofi/windowswitcher/windowswitcher.jpg", height);
-    children: [ "inputbar"];
-}
