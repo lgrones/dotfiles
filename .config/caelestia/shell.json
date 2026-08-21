@@ -81,6 +81,21 @@
             "terminal": [
                 "kitty"
             ]
+        },
+        "idle": {
+            "timeouts": [
+                {
+                    "idleAction": "lock",
+                    "respectInhibitors": true,
+                    "timeout": 180
+                },
+                {
+                    "idleAction": "dpms off",
+                    "respectInhibitors": true,
+                    "returnAction": "dpms on",
+                    "timeout": 300
+                }
+            ]
         }
     },
     "launcher": {
