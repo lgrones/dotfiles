@@ -11,7 +11,9 @@ return {
     editor                     = "code",
     fileExplorer               = "thunar",
     taskManager                = "kitty -e btop",
-    discord                    = "discord",
+    discord                    = "vesktop",
+    spotify                    = "spotify",
+    imglib                     = "imglib-desktop",
 
     -- Actions
     wallpaperModeWorkspace     = "wallpaper_view",
@@ -61,6 +63,8 @@ return {
     kbEditor                   = "SUPER + C",
     kbFileExplorer             = "SUPER + E",
     kbDiscord                  = "SUPER + D",
+    kbSpotify                  = "SUPER + S",
+    kbImglib                   = "SUPER + I",
 
     -- Actions
     kbSession                  = "SUPER + escape",

@@ -73,3 +73,4 @@ application/octet-stream=code.desktop
 inode/fifo=code.desktop
 application/vnd.ms-publisher=code.desktop
 text/css=code.desktop
+x-scheme-handler/discord=vesktop.desktop
