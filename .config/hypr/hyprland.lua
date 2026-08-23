@@ -27,7 +27,3 @@ require("hyprland.group")
 require("hyprland.execs")
 require("hyprland.rules")
 require("hyprland.keybindings")
-
--- User configs
-fn.maybe_create(home .. "/.config/caelestia/hypr-user.lua")
-require("hypr-user")
