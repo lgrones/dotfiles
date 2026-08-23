@@ -33,6 +33,31 @@ hl.window_rule({ match = { class = "vesktop" }, workspace = "special:discord sil
 hl.window_rule({ match = { fullscreen = true }, idle_inhibit = "fullscreen" })
 hl.window_rule({ match = { class = "^(gamescope|steam_app_\\d+|steam_proton)$" }, idle_inhibit = "always" })
 
+-- Xwayland drag/popup windows have no class or title, grab focus on map and
+-- hand it straight back, flickering focus and fullscreen state.
+hl.window_rule({
+    match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
+    no_focus = true,
+})
+
+-- Windows re-asserting maximize fight popups over their state.
+hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
+
+-- Endfield's login webview shares the game's class and maps as "Form" at the
+-- title screen. Letting it take focus starts a ~40Hz focus/fullscreen fight
+-- with the game, which keeps the foreground window unsettled so Steam Remote
+-- Play never re-hooks the game after falling back to desktop capture.
+hl.window_rule({ match = { class = "^steam_app_3814670559$", title = "^Form$" }, no_focus = true })
+hl.window_rule({ match = { class = "^steam_app_3814670559$", title = "^Form$" }, suppress_event = "maximize activatefocus" })
+
+-- Steam Remote Play's desktop-capture rect is the bounding box of the game's
+-- X11 windows, not a monitor. This webview is a floating xwayland window, so
+-- the center rule above skips it and it keeps its own coordinates -- landing on
+-- DP-3 and widening the rect to 5116x1440, which the client letterboxes down to
+-- 1920x542. Pin it to the game's monitor to keep the rect at 2560x1440.
+hl.window_rule({ match = { class = "^steam_app_3814670559$", title = "^Form$" }, monitor = "DP-2" })
+hl.window_rule({ match = { class = "^steam_app_3814670559$", title = "^Form$" }, center = true })
+
 -----------------------
 --  WORKSPACE RULES  --
 -----------------------

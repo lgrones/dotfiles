@@ -41,7 +41,10 @@ hl.config({
         disable_hyprland_logo        = true,
         force_default_wallpaper      = 0,
 
-        on_focus_under_fullscreen    = 2,
+        -- 2 un-fullscreens the fullscreen window when another window activates.
+        -- Game login webviews map mid-session, which dropped the game to windowed
+        -- permanently (fsClient=0, no client request). 0 opens them behind instead.
+        on_focus_under_fullscreen    = 0,
         allow_session_lock_restore   = true,
         middle_click_paste           = false,
         focus_on_activate            = true,
