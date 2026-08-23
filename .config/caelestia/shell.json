@@ -114,6 +114,17 @@
             {
                 "command": [
                     "autocomplete",
+                    "monwall"
+                ],
+                "dangerous": false,
+                "description": "Change the wallpaper of this monitor only, keeping the scheme",
+                "enabled": true,
+                "icon": "wallpaper",
+                "name": "Monitor wallpaper"
+            },
+            {
+                "command": [
+                    "autocomplete",
                     "scheme"
                 ],
                 "dangerous": false,
