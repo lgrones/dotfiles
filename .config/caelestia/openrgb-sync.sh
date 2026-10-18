@@ -59,4 +59,13 @@ print("".join(f"{min(255, max(0, round(c * gain * 255))):02x}"
 PY
 ) || exit 0
 
-openrgb --noautoconnect --mode static --color "$colour" >/dev/null 2>&1
+# ZONE SIZES: since OpenRGB 1.0 the CLI does not apply the zone sizes stored in
+# Configuration.json, so the board's three ARGB headers come up with 0 LEDs and
+# the static write never reaches the fans (they stay on firmware rainbow).
+# Pass the sizes explicitly on every run. Selecting the board by name means
+# other controllers are no longer covered implicitly -- add a -d block per
+# new device (e.g. the Lian Li AIO once its USB header is connected).
+openrgb --noautoconnect \
+    --device "B850 AORUS STEALTH ICE" \
+    --zone 0 --size 20 --zone 1 --size 20 --zone 2 --size 20 \
+    --mode static --color "$colour" >/dev/null 2>&1
